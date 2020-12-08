@@ -77,7 +77,6 @@ class _CostsDetailScreenState extends State<CostsDetailScreen> {
 
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        // onPressed: () {},
         onPressed: () => _openTransactionFormModal(context),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

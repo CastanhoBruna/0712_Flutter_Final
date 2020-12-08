@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import '../utils/app_routes.dart';
@@ -31,7 +32,6 @@ class _TransactionFormState extends State<TransactionForm> {
     }
     
     widget.onSubmit(titletrip, title, value, _selectedDate); 
-
 
 
 //colocar aqui para gravar no Bnanco Firebase 

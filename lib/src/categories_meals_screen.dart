@@ -12,7 +12,7 @@ class CategoriesMealsScreen extends StatelessWidget {
 
   const CategoriesMealsScreen(this.meals);
 
-  @override
+  @override  
   Widget build(BuildContext context) {
     final category = ModalRoute.of(context).settings.arguments as Category;
 

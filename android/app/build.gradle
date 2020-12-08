@@ -39,8 +39,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        // applicationId "ogliari.flutter.flutter_fiap_state_manager"
-        applicationId "br.com.flutterfiapproj.flutter"
+        applicationId "br.com.flutterfiapproj.flutter" 
         minSdkVersion 16
         targetSdkVersion 29
         versionCode flutterVersionCode.toInteger()

@@ -40,52 +40,78 @@ class TransactionList extends StatelessWidget {
                         ),
                       )
                   ),
+
+            //       FlatButton(
+            // color: Colors.blueGrey,
+            // textColor: Colors.white,
+            // onPressed: () {
+            //   // exibitokenFirebase(); 
+            //                 //
+            //               },
+            //               child: Text(
+            //                 "Instagram",
+            //                 style: TextStyle(fontSize: 20.0),
+            //               ),
+            //             ),
+                            
+                            ],
+                          )
+                        : ListView.builder(
+                            itemCount: transactions.length,
+                            itemBuilder: (ctx, index) {
+                              final tr = transactions[index];
+                              return Card(
+                                elevation: 5,
+                                margin: EdgeInsets.symmetric(
+                                  vertical: 8,
+                                  horizontal: 5,
+                                ),
+                                child: ListTile(
+                                  leading: CircleAvatar(
+                                    radius: 30,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(6),
+                                      child: FittedBox(
+                                        child: Text('R\$${tr.value}'),
+                                      ),
+                                    ),
+                                  ),
+                                  isThreeLine: true,
+                                  title: Text(
+                                    tr.titletrip,
+                                    style: Theme.of(context).textTheme.headline5,
+                                  ),
+                                  subtitle: Text(
+                                    tr.title + '   ' +  DateFormat('d MMM y').format(tr.date), 
+                                    // style: Theme.of(context).textTheme.headline6,
+                                    
+                                  ),
+                                  
+                                  trailing: IconButton(
+                                    icon: Icon(Icons.delete),
+                                    color: Theme.of(context).errorColor,
+                                    onPressed: () => onRemove(tr.id),
+                                  ),
+                                ),
+                              );
+                            },
+                          ),
+                  );
+                }
+              }
               
-              ],
-            )
-          : ListView.builder(
-              itemCount: transactions.length,
-              itemBuilder: (ctx, index) {
-                final tr = transactions[index];
-                return Card(
-                  elevation: 5,
-                  margin: EdgeInsets.symmetric(
-                    vertical: 8,
-                    horizontal: 5,
-                  ),
-                  child: ListTile(
-                    leading: CircleAvatar(
-                      radius: 30,
-                      child: Padding(
-                        padding: const EdgeInsets.all(6),
-                        child: FittedBox(
-                          child: Text('R\$${tr.value}'),
-                        ),
-                      ),
-                    ),
-                    isThreeLine: true,
-                    title: Text(
-                      tr.titletrip,
-                      style: Theme.of(context).textTheme.headline5,
-                    ),
-                    subtitle: Text(
-                      tr.title + '   ' +  DateFormat('d MMM y').format(tr.date), 
-                      // style: Theme.of(context).textTheme.headline6,
-                      
-                    ),
-                    
-                    trailing: IconButton(
-                      icon: Icon(Icons.delete),
-                      color: Theme.of(context).errorColor,
-                      onPressed: () => onRemove(tr.id),
-                    ),
-                  ),
-                );
-              },
-            ),
-    );
-  }
-}
+
+
+//               void exibitokenFirebase() {
+//                  final FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
+
+//   FirebaseMessaging.getInstance().getToken(); 
+
+//   print("FirebaseMessaging token >>>>>>>>>>>>>: $token");
+// }
+
+
+
 
 // class SpringCurve extends Curve {
 //   const SpringCurve({

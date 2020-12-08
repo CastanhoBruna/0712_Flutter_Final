@@ -73,7 +73,10 @@ class _HomePagePosState extends State<HomePagePos> {
 
        floatingActionButton: FloatingActionButton(
         child: Icon(Icons.question_answer),
-        onPressed: () =>  {}
+        onPressed: () =>  {
+          Navigator.of(context).pushNamed(AppRoutes.QUESTIONARIO),
+
+        }
         // _openTransactionFormModal(context)
         ,
       ),

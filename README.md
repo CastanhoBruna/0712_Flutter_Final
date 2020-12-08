@@ -1,4 +1,4 @@
-# flutter_fiap_state_manager
+# br.com.flutterfiapproj.flutter
 
 A new Flutter application.
 

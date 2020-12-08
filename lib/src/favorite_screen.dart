@@ -14,10 +14,7 @@ class FavoriteScreen extends StatelessWidget {
 
 
 
-
-
-
-print(favoriteMeals); 
+print(favorite); 
 
     if (favoriteMeals.isEmpty) {
       return Scaffold(

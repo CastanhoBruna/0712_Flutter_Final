@@ -26,6 +26,7 @@ dependencies:
   google_fonts: ^1.1.1
   google_maps_flutter: ^1.0.6
   http: ^0.12.2
+  json_serializable: ^3.5.1
   mobx: ^1.2.1+1
   mobx_codegen: ^1.1.0+1
   path: null

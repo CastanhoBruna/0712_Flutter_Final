@@ -35,16 +35,63 @@ double long = -46.7557933;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-    // appBar: AppBar(title: Text(category.title)),
-    appBar: AppBar(title: Text('Mapa')),
-    body: GoogleMap(
-      initialCameraPosition: CameraPosition(
-      target: LatLng(lat, long),
-      zoom: 11.0, 
-    ),
-    ),
 
+     return Scaffold(
+      appBar: AppBar(
+        title: Text(' Mapa '),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+           
+            Container(
+              height: 600,
+              alignment: Alignment.center,
+              child: GoogleMap(
+            initialCameraPosition: CameraPosition(
+            target: LatLng(lat, long),
+            zoom: 11.0, 
+          ),
+          ),
+             
+            ),
+          ],
+        ),
+      ),
     );
+
+
+//  return Container(
+//     appBar: AppBar(title: Text('Mapa')),
+//       child: Column(
+//         children: <Widget>[
+
+//           Container(
+//             margin: EdgeInsets.symmetric(vertical: 15),
+//             padding: EdgeInsets.fromLTRB(12, 5, 12, 20),
+//             alignment: Alignment.center,
+//             child: Text(
+//               'MAPA',
+//               // style: TextStyle(
+//               //   fontWeight: FontWeight.w600,
+//               //   fontSize: 23,
+//               // ),
+//             ),
+//           ),
+//           Container(
+//           child: GoogleMap(
+//             initialCameraPosition: CameraPosition(
+//             target: LatLng(lat, long),
+//             zoom: 11.0, 
+//           ),
+//           ),
+//         ),
+          
+
+//         ],
+//       ),
+//     );
   }
-}
+
+
+  }

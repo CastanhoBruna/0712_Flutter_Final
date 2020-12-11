@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 
 import '../components/meal_item.dart';
 import '../model/meal.dart';
+
+// class FavoriteNotifications {
+  // FirebaseMessaging _firebaseMessaging;
+  // FavoriteController controller;
+
+  // FavoriteNotifications(){
+  //   controller = GetIt.I.get<FavoriteController>();
+
+  // }
+
 
 class FavoriteScreen extends StatelessWidget {
   final List<Meal> favoriteMeals;

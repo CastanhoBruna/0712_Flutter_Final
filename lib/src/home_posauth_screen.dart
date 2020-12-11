@@ -72,7 +72,7 @@ class _HomePagePosState extends State<HomePagePos> {
       body: _screens[_selectedScreenIndex]['screen'],
 
        floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.question_answer),
+        child: Icon(Icons.ad_units),
         onPressed: () =>  {
           Navigator.of(context).pushNamed(AppRoutes.QUESTIONARIO),
 

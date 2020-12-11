@@ -84,6 +84,12 @@ class MainDrawer extends StatelessWidget {
             () => Navigator.of(context).pushNamed(AppRoutes.ABOUT),
           ),
 
+          _createItem(
+            Icons.chat,
+            'Chat',
+            () => Navigator.of(context).pushNamed(AppRoutes.CHAT),
+          ),
+
           // _createItem(
           //   Icons.contact_mail,
           //   'Testar Push notification Firebase',

@@ -15,4 +15,5 @@ class AppRoutes {
   static const FIREBASE = '/firebase_screen';
   static const PUSH = '/push_notifications_screen';
   static const QUESTIONARIO = '/questionario_screen';
+  static const CHAT = '/chat_screen';
 }

@@ -6,6 +6,7 @@ import 'package:flutter_fiap_project2/src/about_screen.dart';
 import 'package:flutter_fiap_project2/src/categories_meals_screen.dart';
 import 'package:flutter_fiap_project2/src/costs_detail_screen.dart';
 import 'package:flutter_fiap_project2/src/firebasetest_screen.dart';
+import 'package:flutter_fiap_project2/src/chat_screen.dart';
 import 'package:flutter_fiap_project2/src/questionario_screen.dart';
 import 'package:flutter_fiap_project2/src/home_posauth_screen.dart';
 import 'package:flutter_fiap_project2/src/meal_detail_screen.dart';
@@ -36,8 +37,8 @@ void main() async {
   GetIt.I.registerSingleton<PaymentController>(PaymentController());
   runApp(
     ChangeNotifierProvider(
-      create: (context) => ApplicationState(),
       builder: (context, _) => MyApp(),
+      create: (context) => ApplicationState(),
     ),
     );
 }
@@ -102,6 +103,7 @@ home: HomePage(),
         AppRoutes.WIFI: (_) => WifiScreen(),
         AppRoutes.FIREBASE: (_) => FirebaseScreen(),
         AppRoutes.HOME_APP: (_) => HomePagePos(),
+        AppRoutes.CHAT: (_) => ChatScreen(),
         AppRoutes.QUESTIONARIO: (_) => TripOptionForm(tripoption: null, cancel: () {},),
         // AppRoutes.HOME_APP: (ctx) => HomePagePos(_favoriteMeals),
         // AppRoutes.SETTINGS: (ctx) => SettingsScreen(settings, _filterMeals),

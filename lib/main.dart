@@ -25,16 +25,24 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+import 'services/textoget_service.dart';
+
 import 'model/meal.dart';
 import 'src/authentication.dart';
 import 'src/maps_screen.dart';
 import 'src/widgets.dart';
 
 import 'utils/app_routes.dart';
+import 'service_locator.dart';
+
 
 
 void main() async {
-  GetIt.I.registerSingleton<PaymentController>(PaymentController());
+    setupLocator();
+
+//   GetIt.I.registerSingleton<PaymentController>(PaymentController());
+// GetIt.I.registerSingleton(TextoGetService); 
+
   runApp(
     ChangeNotifierProvider(
       builder: (context, _) => MyApp(),
